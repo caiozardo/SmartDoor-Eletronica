@@ -11,8 +11,10 @@ Você pode executar os exemplos no diretório de trabalho, mas uma configuraçã
 
 Lepton pode tomar como argumento opcional o dispositivo SPI no qual encontrar o Lepton. Se em seu sistema esse dispositivo for /dev/spidev0.1, você pode instanciar o Lepton como:
 
-```...
+```
+...
 with Lepton("/dev/spidev0.1") as l:
-  ...```
+  ...
+  ```
   
   
