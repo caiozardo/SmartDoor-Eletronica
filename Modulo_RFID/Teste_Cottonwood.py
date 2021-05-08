@@ -12,7 +12,7 @@ myserial.begin(9600);
 }
 void loop()
 {
-// turn on antenna
+// Ligar antena
 while(Serial.available())
 {
 incomingByte = Serial.read();
