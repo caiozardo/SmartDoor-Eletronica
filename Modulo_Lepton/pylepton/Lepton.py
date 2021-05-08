@@ -5,7 +5,7 @@ import ctypes
 import struct
 import time
 
-# relative imports in Python3 must be explicit
+# importações relativas em Python3 devem ser explícitas
 from .ioctl_numbers import _IOR, _IOW
 from fcntl import ioctl
 
@@ -77,7 +77,7 @@ class Lepton(object):
         0)                                                                  #   __u32     pad;
 
   def __enter__(self):
-    # "In Python 3 the only way to open /dev/tty under Linux appears to be 1) in binary mode and 2) with buffering disabled."
+    # No Python 3, a única maneira de abrir / dev / tty no Linux parece ser 1) no modo binário e 2) com o buffer desativado
     self.__handle = open(self.__spi_dev, "wb+", buffering=0)
 
     ioctl(self.__handle, SPI_IOC_RD_MODE, struct.pack("=B", Lepton.MODE))
