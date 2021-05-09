@@ -1,16 +1,20 @@
-/* Esse script será responsável por iniciar o Chromium e simular o acionamento das teclas. Para criar o script foi executado o seguinte comando:*/
+Esse script será responsável por iniciar o Chromium e simular o acionamento das teclas. Para criar o script foi executado o seguinte comando:
 
 ```nano /home/pi/kiosk.sh```
 
-/*define como o interpretador de comandos vai executar o arquivo*/
+define como o interpretador de comandos vai executar o arquivo
 
-#!/bin/bash
+```
+#!/bin/bash 
+```
 
-# Essa três linhas impedem que o gerenciador de energia desligue ou apague a tela.
+Essa três linhas impedem que o gerenciador de energia desligue ou apague a tela.
 
+```
 xset s noblank
 xset s off
-xset -dpms
+xset -dpms 
+```
 
 #Essa linha executa o programa unclutter, anteriormente instalado. Essa aplicação esconde o mouse da tela sempre que o mesmo estiver ocioso por mais de 0,5 segundos. 
 #Você pode ajustar a tempo conforme deseja ou, se deseja esconder o mouse imediatamente, remova o -idle 0.5 do comando
