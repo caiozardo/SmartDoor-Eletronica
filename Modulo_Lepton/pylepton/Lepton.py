@@ -31,10 +31,10 @@ SPI_MODE_2 = (SPI_CPOL|0)
 SPI_MODE_3 = (SPI_CPOL|SPI_CPHA)
 
 class Lepton(object):
-  """Communication class for FLIR Lepton module on SPI
-  Args:
-    spi_dev (str): Location of SPI device node. Default '/dev/spidev0.0'.
-  """
+ # """Communication class for FLIR Lepton module on SPI
+ # Args:
+ #   spi_dev (str): Location of SPI device node. Default '/dev/spidev0.0'.
+ 
 
   ROWS = 60
   COLS = 80
@@ -127,16 +127,16 @@ class Lepton(object):
       messages -= count
 
   def capture(self, data_buffer = None, log_time = False, debug_print = False, retry_reset = True):
-    """Capture a frame of data.
-    Captures 80x60 uint16 array of non-normalized (raw 12-bit) data. Returns that frame and a frame_id (which
-    is currently just the sum of all pixels). The Lepton will return multiple, identical frames at a rate of up
-    to ~27 Hz, with unique frames at only ~9 Hz, so the frame_id can help you from doing additional work
-    processing duplicate frames.
-    Args:
-      data_buffer (numpy.ndarray): Optional. If specified, should be ``(60,80,1)`` with `dtype`=``numpy.uint16``.
-    Returns:
-      tuple consisting of (data_buffer, frame_id)
-    """
+ #   """Capture a frame of data.
+ #   Captures 80x60 uint16 array of non-normalized (raw 12-bit) data. Returns that frame and a frame_id (which
+ #   is currently just the sum of all pixels). The Lepton will return multiple, identical frames at a rate of up
+ #  to ~27 Hz, with unique frames at only ~9 Hz, so the frame_id can help you from doing additional work
+  #  processing duplicate frames.
+  #  Args:
+  #    data_buffer (numpy.ndarray): Optional. If specified, should be ``(60,80,1)`` with `dtype`=``numpy.uint16``.
+  #  Returns:
+  #    tuple consisting of (data_buffer, frame_id)
+   
 
     start = time.time()
 
