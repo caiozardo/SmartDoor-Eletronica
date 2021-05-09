@@ -1,8 +1,8 @@
-# Esse script será responsável por iniciar o Chromium e simular o acionamento das teclas. Para criar o script foi executado o seguinte comando:
+/* Esse script será responsável por iniciar o Chromium e simular o acionamento das teclas. Para criar o script foi executado o seguinte comando:*/
 
 ```nano /home/pi/kiosk.sh```
 
-#define como o interpretador de comandos vai executar o arquivo#
+/*define como o interpretador de comandos vai executar o arquivo*/
 
 #!/bin/bash
 
